@@ -16,9 +16,9 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore project dependencies
       run: dotnet restore TextUtils/TextUtils.csproj
-    - name: Build Obfuscation.Tasks project
+    - name: Build TextUtils
       run: dotnet build TextUtils/TextUtils.csproj --no-restore --configuration Release
-    - name: Pack Obfuscation.Tasks project
+    - name: Pack TextUtils
       run: dotnet pack TextUtils/TextUtils.csproj --no-build --configuration Release #--include-symbols -p:SymbolPackageFormat=snupkg -o .
     - name: Publish package to NuGet
-      run: dotnet nuget push *.nupkg --api-key oy2e54gywqsmgfgerf4qpsf3zee7vo7u5f2hykmq3ltjpq --source "https://api.nuget.org/v3/index.json" --skip-duplicate
+      run: dotnet nuget push /home/runner/work/TextUtils/TextUtils/TextUtils/bin/Release/*.nupkg --api-key oy2e54gywqsmgfgerf4qpsf3zee7vo7u5f2hykmq3ltjpq --source "https://api.nuget.org/v3/index.json" --skip-duplicate
