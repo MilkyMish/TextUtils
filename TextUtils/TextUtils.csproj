@@ -5,6 +5,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Version>0.0.1</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>__test___TextUtils</PackageId>
+        <Authors>test</Authors>
     </PropertyGroup>
 
 </Project>
